@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-39zplp)er3%6h*wi6v*_g1ku4ioq2&&j1#d-a6!c7oi$5*s!jg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'boats.rs']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'boats.rs', 'boats.rs.itbranch.rs']
 
 
 # Application definition
@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'whitenoise',
     'django_browser_reload',
 ]
 
