@@ -1,0 +1,19 @@
+{% load static %}
+
+<!-- templates/components/accordion.html -->
+
+<div class="border rounded-lg overflow-hidden">
+    <button class="accordion-btn block w-full bg-gray-300 p-3 font-bold cursor-pointer flex justify-between items-center">
+        <span>{{ title }}</span>
+        <span class="icon">+</span>
+    </button>
+    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 bg-gray-200 ">
+        <div class="p-3">
+            <ul class="list-disc pl-5">
+                {% for item in items %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

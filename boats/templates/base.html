@@ -1,0 +1,39 @@
+
+{% load static %}
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} test{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% tailwind_css %}
+    <link rel="icon" href="" type="image/png" class="h-6">
+
+</head>
+
+<!-- Postaviti klasu overflow-x-hidden-->
+<body>
+    <!-- Ikonica koja vodi na početak -->
+    {% include 'header.html' %}
+
+
+    {% block content %}
+    {% endblock %}
+
+
+
+
+    {% include 'footer.html' %}
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>
+
+

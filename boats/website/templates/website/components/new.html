@@ -1,0 +1,25 @@
+{% load static %}
+
+<a href="{% url 'product_details' yacht.slug %}" class="relative w-full z-0">
+    <img src="{% static 'img/new.png' %}" alt="Background Image" class="w-full h-auto object-cover">
+
+    <!-- Gradijent Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent hover:from-blue-900 cursor-pointer"></div>
+
+    <!-- Tekst na dnu -->
+    <div class="absolute bottom-5 left-0 w-full text-white px-5">
+        <h2 class="text-5xl font-bold">{{yacht.name}}</h2>
+        <p class="text-sm text-gray-400">Yacht type.</p>
+        <div class="grid grid-cols-3">
+            <div class="">naveta type 1</div>
+            <div class="">naveta type 2</div>
+            <div class="">naveta type 3</div>
+            <div class="">naveta type 4</div>
+            <div class="">naveta type 5</div>
+            <div class="">naveta type 6</div>
+        </div>
+    </div>
+</a>
+
+
+

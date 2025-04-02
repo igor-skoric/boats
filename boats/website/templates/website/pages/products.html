@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+
+{% if product_type == 'new' %}
+    {% include 'website/components/hero.html' with title='Nova Plovila' description='Pogledajte neka od nasih plovila' %}
+{% elif product_type == 'used' %}
+    {% include 'website/components/hero.html' with title='Koriscena Plovila' description='Pogledajte neka od nasih plovila' %}
+{% endif %}
+
+
+
+<section id="newBoats" class="mx-auto max-w-[1200px]">
+    <div class="p-5 text-center text-3xl">ABSOLUTE</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-lg p-5">
+        {% if product_type == 'new' %}
+            {% for yacht in yachts %}
+                {% include 'website/components/new.html' with yacht=yacht %}
+            {% endfor %}
+
+        {% elif product_type == 'used' %}
+            {% for yacht in yachts %}
+                {% include 'website/components/used.html' with yacht=yacht %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+
+{% endblock %}
+

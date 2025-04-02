@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+
+
+{% include 'website/components/hero.html' with title='Dobrodosli' description='Zavirite u nasa plovila' %}
+{% include 'website/components/services_icons.html' %}
+
+<div class="h-[500px]"></div>
+{% endblock %}
+

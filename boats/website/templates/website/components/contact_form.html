@@ -1,0 +1,31 @@
+{% load static %}
+
+
+<form class="space-y-4" method="POST" action="">
+    <div class="flex justify-between">
+        <h3>{{yacht.name}}</h3>
+        <p class="text-2xl font-semibold text-gray-800">${{yacht.price}}</p>
+    </div>
+    <span> For any question plaease contact our managers (we speak English, German, Russian, Serbian).</span>
+    <div class="flex gap-5">
+        <div class="flex gap-3">
+            <p>Phone</p>
+            <p>{{config.contact_phone}}</p>
+        </div>
+        <div class="flex gap-3">
+            <p>Email</p>
+            <p>{{config.email}}</p>
+        </div>
+    </div>
+    <input type="text" placeholder="Ime"
+           class="w-full p-2 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300">
+    <input type="text" placeholder="Telefon"
+           class="w-full p-2 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300">
+    <input type="text" placeholder="Email"
+           class="w-full p-2 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300">
+    <textarea placeholder="Poruka" rows="1"
+              class="w-full p-2 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"></textarea>
+    <button type="submit" class="w-full bg-gray-700 text-white p-3 rounded-lg hover:bg-gray-400 transition">
+        Pošalji
+    </button>
+</form>

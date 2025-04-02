@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+{% include 'website/components/hero.html' with title='Usluge' description='pogledajte naše usluge' %}
+<section id="services" class="container-custom">
+    <br>
+    <div class="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 z-10 text-black ">
+        <a href="{% url 'service_details' %}" class="">
+            <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer shadow-xl">
+                <img src="{% static 'img/services/care.png'%}" alt=""
+                     class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
+                <div class="p-5">
+                    <p class="text-xs">Neki nesto</p>
+                    <h3 class="">Organizacija „Survey“ pregleda</h3>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia
+                        porro repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore
+                        molestiae quo. Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum
+                        esse eum excepturi minus nostrum officiis, optio recusandae. Cumque dicta fugit totam
+                        veniam?</p>
+                </div>
+            </div>
+        </a>
+        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer shadow-xl">
+            <img src="{% static 'img/services/care.png'%}" alt=""
+                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
+            <div class="p-5">
+                <p class="text-xs">Neki nesto</p>
+                <h3 class="">Transfer plovila</h3>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
+                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
+                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
+                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
+            </div>
+        </div>
+        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer">
+            <img src="{% static 'img/services/care.png'%}" alt=""
+                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
+            <div class="p-5">
+                <p class="text-xs">Neki nesto</p>
+                <h3 class="">Vansezonska briga o plovilu</h3>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
+                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
+                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
+                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
+            </div>
+        </div>
+        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer">
+            <img src="{% static 'img/services/care.png'%}" alt=""
+                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
+            <div class="p-5">
+                <p class="text-xs">Neki nesto</p>
+                <h3 class="">Posredovanje pri registraciji plovila</h3>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
+                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
+                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
+                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
+            </div>
+        </div>
+        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer">
+            <img src="{% static 'img/services/care.png'%}" alt=""
+                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
+            <div class="p-5">
+                <p class="text-xs">Neki nesto</p>
+                <h3 class="">Usluge dockinga i održavanje plovila</h3>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
+                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
+                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
+                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
+            </div>
+        </div>
+        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer">
+            <img src="{% static 'img/services/care.png'%}" alt=""
+                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
+            <div class="p-5">
+                <p class="text-xs">Neki nesto</p>
+                <h3 class="">Tehnička podrška i servis</h3>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
+                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
+                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
+                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
+

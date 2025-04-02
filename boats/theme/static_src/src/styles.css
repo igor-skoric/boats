@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Container */
+.container-custom {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Tipografija za naslove */
+h1 {
+    @apply text-4xl font-bold leading-tight tracking-tight mb-4;
+}
+
+h2 {
+    @apply text-3xl font-semibold leading-snug tracking-tight mb-4;
+}
+
+h3 {
+    @apply text-2xl font-semibold leading-snug tracking-tight mb-4;
+}
+
+h4 {
+    @apply text-xl font-medium leading-relaxed tracking-tight mb-4;
+}
+
+h5 {
+    @apply text-lg font-medium leading-relaxed tracking-tight mb-4;
+}
+
+h6 {
+    @apply text-base font-normal leading-relaxed tracking-tight mb-4;
+}
+
+/* DEO CSS-a ZA HOVER */
+/* Uklapa se u Tailwind-ov build proces */
+
+/*
+@layer components {
+  .custom-hover {
+    position: relative;
+    transition: border-top 0.3s ease;
+  }
+
+  .custom-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+  }
+
+  .custom-hover:hover::after {
+    background-color: #2d3748;
+  }
+}
+*/

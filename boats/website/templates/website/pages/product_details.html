@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+
+<section id="boatDetails" class="mx-auto max-w-[1200px] mt-[150px] md:mt-[100px] p-5">
+    <span>home / test2 / test3</span>
+    <br>
+    <br>
+    <h3 class="text-4xl">{{yacht.name}}</h3><br>
+    <div class="grid gap-10 grid-cols-3 ">
+        <div class="col-span-3 xl:col-span-2">
+
+            {% include 'website/components/gallery.html' %}
+
+            <div class="my-20 text-gray-600 font-bold  border-b-5 bg-gray-100 grid grid-cols-1 md:grid-cols-3 group relative rounded-xl shadow-lg text-center">
+                <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
+                     onclick="scrollToElement('target1')">Prvi
+                </div>
+                <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
+                     onclick="scrollToElement('target2')">Drugi
+                </div>
+                <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
+                     onclick="scrollToElement('target3')">Treći
+                </div>
+            </div>
+
+
+            <div class="my-10 grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-0">
+                <div class="border-r border-b border-gray-200 p-4">
+                    <p class="">Length overall 1</p>
+                    <p class="text-2xl">18.66m</p>
+                </div>
+                <div class="md:border-r border-b border-gray-200 p-4">
+                    <p class="">Beam</p>
+                    <p class="text-2xl">4.94m</p>
+                </div>
+                <div class="border-r border-b border-gray-200 p-4">
+                    <p class="">Modelyear</p>
+                    <p class="text-2xl">2022</p>
+                </div>
+                <div class="border-b border-gray-200 p-4">
+                    <p class="">Engines</p>
+                    <p class="text-2xl">2xVolvo Penta D11-IPS 950</p>
+                </div>
+                <div class="border-r border-b md:border-b-0 border-gray-200 p-4">
+                    <p class="">Cabins</p>
+                    <p class="text-2xl">3+1</p>
+                </div>
+                <div class="md:border-r border-b md:border-b-0 border-gray-200 p-4">
+                    <p class="">Heads</p>
+                    <p class="text-2xl">3+1</p>
+                </div>
+                <div class="border-r border-gray-200 p-4">
+                    <p class="">Fresh water tank capacity</p>
+                    <p class="text-2xl">730l</p>
+                </div>
+                <div class="border-gray-200 p-4">
+                    <p class="">Fuel tanks capacity</p>
+                    <p class="text-2xl">2 x 1400 l</p>
+                </div>
+            </div>
+
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at atque consequuntur, cum
+                delectus eaque enim, eveniet, ex illo iste necessitatibus possimus quaerat quidem quisquam sint suscipit
+                temporibus voluptate voluptatem? Assumenda deleniti, maiores quidem repudiandae ut voluptates. Adipisci
+                aspernatur atque autem excepturi fuga modi neque nisi, quisquam reiciendis sapiente! Accusantium beatae
+                eligendi impedit, inventore magni necessitatibus nisi odio vel! Accusantium aliquam architecto
+                blanditiis consectetur consequuntur cumque delectus dolorem eius est eum impedit inventore ipsam ipsum
+                neque nostrum obcaecati quasi reiciendis repudiandae sit, sunt tempore ut vel voluptatum. Adipisci alias
+                amet commodi ipsam nostrum quidem quod quos repellat temporibus voluptatibus. Aliquid aut cum cumque
+                dicta, dolore ducimus eligendi eum excepturi, explicabo facilis harum impedit in incidunt laboriosam
+                libero molestias numquam officia quam quas totam unde voluptas voluptate voluptatem. Aspernatur
+                blanditiis debitis deleniti enim esse, ex expedita incidunt laborum libero mollitia pariatur perferendis
+                placeat quisquam repudiandae sed similique sint tempora, veniam? Ab assumenda ea enim error vero? Beatae
+                doloremque ducimus eaque et ipsum. Adipisci corporis dicta eius minima quia! A, blanditiis dolorem eaque
+                explicabo laudantium magnam qui sed tempore. Accusamus animi beatae blanditiis nisi officiis placeat
+                porro! Ducimus ea enim est magnam maiores modi natus non rem sequi voluptate. Accusamus adipisci alias
+                aliquam amet animi et eveniet explicabo, fuga impedit in magnam non ratione repellendus sequi
+                voluptatibus. Accusantium adipisci, amet aspernatur blanditiis culpa dicta dolores earum explicabo
+                facere fugiat impedit iste labore laborum maxime minima molestias mollitia odit omnis qui quo, ratione
+                reiciendis repellat repudiandae, saepe totam veritatis voluptate voluptates! Aspernatur consectetur
+                doloremque esse et facere facilis id impedit ipsam laborum magnam neque, possimus provident recusandae
+                repudiandae suscipit temporibus veniam? Ab alias amet architecto aspernatur beatae commodi culpa
+                deserunt dicta dolores doloribus eligendi eveniet facere illum inventore ipsum iste iure laboriosam
+                maiores minima, mollitia natus nobis numquam odit quidem quod ratione rerum saepe sequi vero voluptas.
+                Dicta ea fugiat molestiae nobis numquam provident vitae. Alias deleniti eveniet magnam pariatur
+                provident quaerat ratione recusandae reprehenderit sed vel. Dicta doloribus exercitationem omnis quo,
+                ullam ut voluptas! Ad aperiam doloribus expedita ipsum maxime nesciunt nulla qui suscipit! Aspernatur
+                consectetur corporis, dicta distinctio dolore eius enim et expedita fugiat laborum non officia
+                perspiciatis porro suscipit, voluptatem. Deserunt earum illum nobis odio, quam quis recusandae totam
+                vel? Aspernatur blanditiis consequuntur fugit itaque magni nobis optio quod vero! Accusantium aut
+                blanditiis cum delectus eaque harum illum magnam molestiae non omnis placeat porro possimus quis, rem
+                saepe sit soluta suscipit temporibus ullam voluptas? Ad amet animi cum cupiditate deserunt dignissimos
+                dolor doloremque dolores exercitationem in ipsam iste iusto magnam maiores necessitatibus nemo nihil
+                officia omnis perspiciatis, provident quaerat recusandae, sit soluta tempore tenetur unde ut. Alias
+                aliquid consequuntur corporis cupiditate debitis delectus ducimus expedita, facilis fuga, incidunt ipsam
+                ipsum iste libero minima necessitatibus nisi nobis odio pariatur placeat provident quia reiciendis rem
+                reprehenderit rerum suscipit tempore tenetur. Aspernatur consequuntur eligendi harum incidunt iusto
+                necessitatibus officiis omnis porro suscipit voluptatibus? Ad consequuntur, ducimus eligendi minima
+                omnis perferendis repellat sed soluta vero. Cupiditate expedita fuga hic in laboriosam maxime quo vitae!
+            </div>
+
+            <!-- Naslov -->
+            <div id="target1">
+                {% include 'website/components/title_subtitle.html' with title="Naslov 1" items="Prvi" %}
+                {% include 'website/components/title_subtitle.html' with title="Naslov 2" items="Četvrti" %}
+                {% include 'website/components/title_subtitle.html' with title="Naslov 3" items="Sedmi" %}
+            </div>
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at atque consequuntur, cum
+                delectus eaque enim, eveniet, ex illo iste necessitatibus possimus quaerat quidem quisquam sint suscipit
+                temporibus voluptate voluptatem? Assumenda deleniti, maiores quidem repudiandae ut voluptates. Adipisci
+                aspernatur atque autem excepturi fuga modi neque nisi, quisquam reiciendis sapiente! Accusantium beatae
+                eligendi impedit, inventore magni necessitatibus nisi odio vel! Accusantium aliquam architecto
+                blanditiis consectetur consequuntur cumque delectus dolorem eius est eum impedit inventore ipsam ipsum
+                neque nostrum obcaecati quasi reiciendis repudiandae sit, sunt tempore ut vel voluptatum. Adipisci alias
+                amet commodi ipsam nostrum quidem quod quos repellat temporibus voluptatibus. Aliquid aut cum cumque
+                dicta, dolore ducimus eligendi eum excepturi, explicabo facilis harum impedit in incidunt laboriosam
+                libero molestias numquam officia quam quas totam unde voluptas voluptate voluptatem. Aspernatur
+                blanditiis debitis deleniti enim esse, ex expedita incidunt laborum libero mollitia pariatur perferendis
+                placeat quisquam repudiandae sed similique sint tempora, veniam? Ab assumenda ea enim error vero? Beatae
+                doloremque ducimus eaque et ipsum. Adipisci corporis dicta eius minima quia! A, blanditiis dolorem eaque
+                explicabo laudantium magnam qui sed tempore. Accusamus animi beatae blanditiis nisi officiis placeat
+                porro! Ducimus ea enim est magnam maiores modi natus non rem sequi voluptate. Accusamus adipisci alias
+                aliquam amet animi et eveniet explicabo, fuga impedit in magnam non ratione repellendus sequi
+                voluptatibus. Accusantium adipisci, amet aspernatur blanditiis culpa dicta dolores earum explicabo
+                facere fugiat impedit iste labore laborum maxime minima molestias mollitia odit omnis qui quo, ratione
+                reiciendis repellat repudiandae, saepe totam veritatis voluptate voluptates! Aspernatur consectetur
+                doloremque esse et facere facilis id impedit ipsam laborum magnam neque, possimus provident recusandae
+                repudiandae suscipit temporibus veniam? Ab alias amet architecto aspernatur beatae commodi culpa
+                deserunt dicta dolores doloribus eligendi eveniet facere illum inventore ipsum iste iure laboriosam
+                maiores minima, mollitia natus nobis numquam odit quidem quod ratione rerum saepe sequi vero voluptas.
+                Dicta ea fugiat molestiae nobis numquam provident vitae. Alias deleniti eveniet magnam pariatur
+                provident quaerat ratione recusandae reprehenderit sed vel. Dicta doloribus exercitationem omnis quo,
+                ullam ut voluptas! Ad aperiam doloribus expedita ipsum maxime nesciunt nulla qui suscipit! Aspernatur
+                consectetur corporis, dicta distinctio dolore eius enim et expedita fugiat laborum non officia
+                perspiciatis porro suscipit, voluptatem. Deserunt earum illum nobis odio, quam quis recusandae totam
+                vel? Aspernatur blanditiis consequuntur fugit itaque magni nobis optio quod vero! Accusantium aut
+                blanditiis cum delectus eaque harum illum magnam molestiae non omnis placeat porro possimus quis, rem
+                saepe sit soluta suscipit temporibus ullam voluptas? Ad amet animi cum cupiditate deserunt dignissimos
+                dolor doloremque dolores exercitationem in ipsam iste iusto magnam maiores necessitatibus nemo nihil
+                officia omnis perspiciatis, provident quaerat recusandae, sit soluta tempore tenetur unde ut. Alias
+                aliquid consequuntur corporis cupiditate debitis delectus ducimus expedita, facilis fuga, incidunt ipsam
+                ipsum iste libero minima necessitatibus nisi nobis odio pariatur placeat provident quia reiciendis rem
+                reprehenderit rerum suscipit tempore tenetur. Aspernatur consequuntur eligendi harum incidunt iusto
+                necessitatibus officiis omnis porro suscipit voluptatibus? Ad consequuntur, ducimus eligendi minima
+                omnis perferendis repellat sed soluta vero. Cupiditate expedita fuga hic in laboriosam maxime quo vitae!
+            </div>
+        </div>
+        <div class="hidden xl:block col-span-1">
+            <div class="fixed max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md mr-5">
+                {% include 'website/components/contact_form.html' with yacht=yacht%}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include 'website/components/side-icons.html' %}
+<script src="{% static 'js/titleSubtitle.js' %}"></script>
+
+<script>
+    function scrollToElement(targetId) {
+      const element = document.getElementById(targetId);
+      const offset = 100;  // Podesi razmak od vrha (npr 100px)
+
+      window.scrollTo({
+        top: element.offsetTop - offset,
+        behavior: 'smooth'
+      });
+    }
+</script>
+
+
+{% endblock %}
+
