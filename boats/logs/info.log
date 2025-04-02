@@ -13262,3 +13262,9 @@ INFO 2025-04-02 11:37:44,416 basehttp "GET /static/django-browser-reload/reload-
 INFO 2025-04-02 11:37:47,391 basehttp "GET /product_details/prva-jahta/ HTTP/1.1" 200 33556
 INFO 2025-04-02 11:37:47,425 basehttp "GET /static/css/dist/styles.css?v=1743586667 HTTP/1.1" 200 36997
 INFO 2025-04-02 11:37:47,560 basehttp "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 304 0
+INFO 2025-04-02 11:43:53,420 basehttp "GET /product_details/prva-jahta/ HTTP/1.1" 200 33556
+INFO 2025-04-02 11:43:53,471 basehttp "GET /static/css/dist/styles.css?v=1743587033 HTTP/1.1" 200 0
+INFO 2025-04-02 11:43:53,702 basehttp "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 304 0
+INFO 2025-04-02 11:43:57,552 basehttp "GET /product_details/prva-jahta/ HTTP/1.1" 200 33556
+INFO 2025-04-02 11:43:57,609 basehttp "GET /static/css/dist/styles.css?v=1743587037 HTTP/1.1" 200 38378
+INFO 2025-04-02 11:43:57,665 basehttp "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 304 0
