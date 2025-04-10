@@ -27578,3 +27578,63 @@ INFO 2025-04-10 11:48:27,852 basehttp "GET /static/img/virtual.jpg HTTP/1.1" 304
 INFO 2025-04-10 11:48:27,852 basehttp "GET /static/img/main-deck.png HTTP/1.1" 304 0
 INFO 2025-04-10 11:48:27,917 basehttp "GET /media/yacht_images/2.webp HTTP/1.1" 304 0
 INFO 2025-04-10 11:48:27,921 basehttp "GET /media/yacht_images/3.png HTTP/1.1" 304 0
+INFO 2025-04-10 11:51:05,240 basehttp "GET /product_details/prva-nova-jahta123/ HTTP/1.1" 200 73850
+INFO 2025-04-10 11:51:05,295 basehttp "GET /static/css/dist/styles.css?v=1744278665 HTTP/1.1" 200 41332
+INFO 2025-04-10 11:54:03,579 autoreload D:\projects\boats\Boats\boats\boats\settings.py changed, reloading.
+INFO 2025-04-10 11:54:04,196 autoreload Watching for file changes with StatReloader
+WARNING 2025-04-10 11:54:04,544 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:04,544 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:04,664 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:04,665 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:04,774 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:04,775 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:04,886 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:04,887 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,008 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,008 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,116 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,116 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,225 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,225 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,330 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,331 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,442 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,443 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,549 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,549 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,657 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,657 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,766 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,767 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,876 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,877 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:05,984 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:05,985 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:06,092 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:06,093 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:06,204 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:06,205 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:06,326 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:06,326 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:06,449 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:06,449 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:06,557 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:06,558 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:06,871 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:06,871 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:07,183 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:07,184 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:07,496 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:07,496 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:07,806 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:07,806 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:08,121 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:08,122 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:08,430 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:08,431 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:08,740 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:08,741 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:09,059 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:09,059 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING 2025-04-10 11:54:09,372 log Not Found: /__reload__/events/
+WARNING 2025-04-10 11:54:09,372 basehttp "GET /__reload__/events/ HTTP/1.1" 404 179
