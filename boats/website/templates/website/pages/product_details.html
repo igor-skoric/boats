@@ -6,155 +6,137 @@
 {% block content %}
 
 
-<section id="boatDetails" class="mx-auto max-w-[1200px] mt-[150px] md:mt-[100px] p-5">
-    <span>home / test2 / test3</span>
-    <br>
-    <br>
-    <h3 class="text-4xl">{{yacht.name}}</h3><br>
+<section id="boatDetails" class="mx-auto max-w-[1400px] mt-[150px] md:mt-[100px] p-5">
+    {% include 'website/components/breadcrumbs.html' %}
+
     <div class="grid gap-10 grid-cols-3 ">
         <div class="col-span-3 xl:col-span-2">
-
-            {% include 'website/components/gallery.html' %}
-
+            {% include 'website/components/gallery.html' with yacht=yacht %}
+            <br><br>l
+            <h1 class="text-4xl">{{yacht.name}}</h1><br>
             <div class="my-20 text-gray-600 font-bold  border-b-5 bg-gray-100 grid grid-cols-1 md:grid-cols-3 group relative rounded-xl shadow-lg text-center">
                 <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
-                     onclick="scrollToElement('target1')">Prvi
+                     onclick="scrollToElement('target1')">Dodatne Informacije
                 </div>
                 <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
-                     onclick="scrollToElement('target2')">Drugi
+                     onclick="scrollToElement('target2')">Palube
                 </div>
                 <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
-                     onclick="scrollToElement('target3')">Treći
+                     onclick="scrollToElement('target3')">Virtual Tour
+                </div>
+                <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
+                     onclick="scrollToElement('target4')">Video
                 </div>
             </div>
-
-
             <div class="my-10 grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-0">
+                {% for characteristic in yacht.characteristics.all %}
+                {% if characteristic.name == 'model' %}
                 <div class="border-r border-b border-gray-200 p-4">
-                    <p class="">Length overall 1</p>
-                    <p class="text-2xl">18.66m</p>
+                    <p class="">{{characteristic.get_name_display}}</p>
+                    <p class="text-2xl"> {{characteristic.value}} </p>
                 </div>
+                {% endif %}
+                {% if characteristic.name == 'length' %}
                 <div class="md:border-r border-b border-gray-200 p-4">
-                    <p class="">Beam</p>
-                    <p class="text-2xl">4.94m</p>
+                    <p class="">{{characteristic.get_name_display}}</p>
+                    <p class="text-2xl">{{characteristic.value}}</p>
                 </div>
+                {% endif %}
+                {% if characteristic.name == 'beam' %}
                 <div class="border-r border-b border-gray-200 p-4">
-                    <p class="">Modelyear</p>
-                    <p class="text-2xl">2022</p>
+                    <p class="">{{characteristic.get_name_display}}</p>
+                    <p class="text-2xl">{{characteristic.value}}</p>
                 </div>
+                {% endif %}
+                {% if characteristic.name == 'draft' %}
                 <div class="border-b border-gray-200 p-4">
-                    <p class="">Engines</p>
-                    <p class="text-2xl">2xVolvo Penta D11-IPS 950</p>
+                    <p class="">{{characteristic.get_name_display}}</p>
+                    <p class="text-2xl">{{characteristic.value}}</p>
                 </div>
+                {% endif %}
+                {% if characteristic.name == 'weight' %}
                 <div class="border-r border-b md:border-b-0 border-gray-200 p-4">
-                    <p class="">Cabins</p>
-                    <p class="text-2xl">3+1</p>
+                    <p class="">{{characteristic.get_name_display}}</p>
+                    <p class="text-2xl">{{characteristic.value}}</p>
                 </div>
+                {% endif %}
+                {% if characteristic.name == 'propulsion' %}
                 <div class="md:border-r border-b md:border-b-0 border-gray-200 p-4">
-                    <p class="">Heads</p>
-                    <p class="text-2xl">3+1</p>
+                    <p class="">{{characteristic.get_name_display}}</p>
+                    <p class="text-2xl">{{characteristic.value}}</p>
                 </div>
+                {% endif %}
+                {% if characteristic.name == 'fuel_tank' %}
                 <div class="border-r border-gray-200 p-4">
-                    <p class="">Fresh water tank capacity</p>
-                    <p class="text-2xl">730l</p>
+                    <p class="">{{characteristic.get_name_display}}</p>
+                    <p class="text-2xl">{{characteristic.value}}</p>
                 </div>
+                {% endif %}
+                {% if characteristic.name == 'water_tank' %}
                 <div class="border-gray-200 p-4">
-                    <p class="">Fuel tanks capacity</p>
-                    <p class="text-2xl">2 x 1400 l</p>
+                    <p class="">{{characteristic.get_name_display}}</p>
+                    <p class="text-2xl">{{characteristic.value}}</p>
                 </div>
+                {% endif %}
+                {% endfor %}
             </div>
-
-
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at atque consequuntur, cum
-                delectus eaque enim, eveniet, ex illo iste necessitatibus possimus quaerat quidem quisquam sint suscipit
-                temporibus voluptate voluptatem? Assumenda deleniti, maiores quidem repudiandae ut voluptates. Adipisci
-                aspernatur atque autem excepturi fuga modi neque nisi, quisquam reiciendis sapiente! Accusantium beatae
-                eligendi impedit, inventore magni necessitatibus nisi odio vel! Accusantium aliquam architecto
-                blanditiis consectetur consequuntur cumque delectus dolorem eius est eum impedit inventore ipsam ipsum
-                neque nostrum obcaecati quasi reiciendis repudiandae sit, sunt tempore ut vel voluptatum. Adipisci alias
-                amet commodi ipsam nostrum quidem quod quos repellat temporibus voluptatibus. Aliquid aut cum cumque
-                dicta, dolore ducimus eligendi eum excepturi, explicabo facilis harum impedit in incidunt laboriosam
-                libero molestias numquam officia quam quas totam unde voluptas voluptate voluptatem. Aspernatur
-                blanditiis debitis deleniti enim esse, ex expedita incidunt laborum libero mollitia pariatur perferendis
-                placeat quisquam repudiandae sed similique sint tempora, veniam? Ab assumenda ea enim error vero? Beatae
-                doloremque ducimus eaque et ipsum. Adipisci corporis dicta eius minima quia! A, blanditiis dolorem eaque
-                explicabo laudantium magnam qui sed tempore. Accusamus animi beatae blanditiis nisi officiis placeat
-                porro! Ducimus ea enim est magnam maiores modi natus non rem sequi voluptate. Accusamus adipisci alias
-                aliquam amet animi et eveniet explicabo, fuga impedit in magnam non ratione repellendus sequi
-                voluptatibus. Accusantium adipisci, amet aspernatur blanditiis culpa dicta dolores earum explicabo
-                facere fugiat impedit iste labore laborum maxime minima molestias mollitia odit omnis qui quo, ratione
-                reiciendis repellat repudiandae, saepe totam veritatis voluptate voluptates! Aspernatur consectetur
-                doloremque esse et facere facilis id impedit ipsam laborum magnam neque, possimus provident recusandae
-                repudiandae suscipit temporibus veniam? Ab alias amet architecto aspernatur beatae commodi culpa
-                deserunt dicta dolores doloribus eligendi eveniet facere illum inventore ipsum iste iure laboriosam
-                maiores minima, mollitia natus nobis numquam odit quidem quod ratione rerum saepe sequi vero voluptas.
-                Dicta ea fugiat molestiae nobis numquam provident vitae. Alias deleniti eveniet magnam pariatur
-                provident quaerat ratione recusandae reprehenderit sed vel. Dicta doloribus exercitationem omnis quo,
-                ullam ut voluptas! Ad aperiam doloribus expedita ipsum maxime nesciunt nulla qui suscipit! Aspernatur
-                consectetur corporis, dicta distinctio dolore eius enim et expedita fugiat laborum non officia
-                perspiciatis porro suscipit, voluptatem. Deserunt earum illum nobis odio, quam quis recusandae totam
-                vel? Aspernatur blanditiis consequuntur fugit itaque magni nobis optio quod vero! Accusantium aut
-                blanditiis cum delectus eaque harum illum magnam molestiae non omnis placeat porro possimus quis, rem
-                saepe sit soluta suscipit temporibus ullam voluptas? Ad amet animi cum cupiditate deserunt dignissimos
-                dolor doloremque dolores exercitationem in ipsam iste iusto magnam maiores necessitatibus nemo nihil
-                officia omnis perspiciatis, provident quaerat recusandae, sit soluta tempore tenetur unde ut. Alias
-                aliquid consequuntur corporis cupiditate debitis delectus ducimus expedita, facilis fuga, incidunt ipsam
-                ipsum iste libero minima necessitatibus nisi nobis odio pariatur placeat provident quia reiciendis rem
-                reprehenderit rerum suscipit tempore tenetur. Aspernatur consequuntur eligendi harum incidunt iusto
-                necessitatibus officiis omnis porro suscipit voluptatibus? Ad consequuntur, ducimus eligendi minima
-                omnis perferendis repellat sed soluta vero. Cupiditate expedita fuga hic in laboriosam maxime quo vitae!
-            </div>
-
+            <br>
+            <br>
             <!-- Naslov -->
             <div id="target1">
-                {% include 'website/components/title_subtitle.html' with title="Naslov 1" items="Prvi" %}
-                {% include 'website/components/title_subtitle.html' with title="Naslov 2" items="Četvrti" %}
-                {% include 'website/components/title_subtitle.html' with title="Naslov 3" items="Sedmi" %}
+                {% include 'website/components/title_subtitle.html' with yacht=yacht %}
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="target2">
+                <br><br>
+                {% include 'website/components/mini_gallery.html' %}
             </div>
 
-            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at atque consequuntur, cum
-                delectus eaque enim, eveniet, ex illo iste necessitatibus possimus quaerat quidem quisquam sint suscipit
-                temporibus voluptate voluptatem? Assumenda deleniti, maiores quidem repudiandae ut voluptates. Adipisci
-                aspernatur atque autem excepturi fuga modi neque nisi, quisquam reiciendis sapiente! Accusantium beatae
-                eligendi impedit, inventore magni necessitatibus nisi odio vel! Accusantium aliquam architecto
-                blanditiis consectetur consequuntur cumque delectus dolorem eius est eum impedit inventore ipsam ipsum
-                neque nostrum obcaecati quasi reiciendis repudiandae sit, sunt tempore ut vel voluptatum. Adipisci alias
-                amet commodi ipsam nostrum quidem quod quos repellat temporibus voluptatibus. Aliquid aut cum cumque
-                dicta, dolore ducimus eligendi eum excepturi, explicabo facilis harum impedit in incidunt laboriosam
-                libero molestias numquam officia quam quas totam unde voluptas voluptate voluptatem. Aspernatur
-                blanditiis debitis deleniti enim esse, ex expedita incidunt laborum libero mollitia pariatur perferendis
-                placeat quisquam repudiandae sed similique sint tempora, veniam? Ab assumenda ea enim error vero? Beatae
-                doloremque ducimus eaque et ipsum. Adipisci corporis dicta eius minima quia! A, blanditiis dolorem eaque
-                explicabo laudantium magnam qui sed tempore. Accusamus animi beatae blanditiis nisi officiis placeat
-                porro! Ducimus ea enim est magnam maiores modi natus non rem sequi voluptate. Accusamus adipisci alias
-                aliquam amet animi et eveniet explicabo, fuga impedit in magnam non ratione repellendus sequi
-                voluptatibus. Accusantium adipisci, amet aspernatur blanditiis culpa dicta dolores earum explicabo
-                facere fugiat impedit iste labore laborum maxime minima molestias mollitia odit omnis qui quo, ratione
-                reiciendis repellat repudiandae, saepe totam veritatis voluptate voluptates! Aspernatur consectetur
-                doloremque esse et facere facilis id impedit ipsam laborum magnam neque, possimus provident recusandae
-                repudiandae suscipit temporibus veniam? Ab alias amet architecto aspernatur beatae commodi culpa
-                deserunt dicta dolores doloribus eligendi eveniet facere illum inventore ipsum iste iure laboriosam
-                maiores minima, mollitia natus nobis numquam odit quidem quod ratione rerum saepe sequi vero voluptas.
-                Dicta ea fugiat molestiae nobis numquam provident vitae. Alias deleniti eveniet magnam pariatur
-                provident quaerat ratione recusandae reprehenderit sed vel. Dicta doloribus exercitationem omnis quo,
-                ullam ut voluptas! Ad aperiam doloribus expedita ipsum maxime nesciunt nulla qui suscipit! Aspernatur
-                consectetur corporis, dicta distinctio dolore eius enim et expedita fugiat laborum non officia
-                perspiciatis porro suscipit, voluptatem. Deserunt earum illum nobis odio, quam quis recusandae totam
-                vel? Aspernatur blanditiis consequuntur fugit itaque magni nobis optio quod vero! Accusantium aut
-                blanditiis cum delectus eaque harum illum magnam molestiae non omnis placeat porro possimus quis, rem
-                saepe sit soluta suscipit temporibus ullam voluptas? Ad amet animi cum cupiditate deserunt dignissimos
-                dolor doloremque dolores exercitationem in ipsam iste iusto magnam maiores necessitatibus nemo nihil
-                officia omnis perspiciatis, provident quaerat recusandae, sit soluta tempore tenetur unde ut. Alias
-                aliquid consequuntur corporis cupiditate debitis delectus ducimus expedita, facilis fuga, incidunt ipsam
-                ipsum iste libero minima necessitatibus nisi nobis odio pariatur placeat provident quia reiciendis rem
-                reprehenderit rerum suscipit tempore tenetur. Aspernatur consequuntur eligendi harum incidunt iusto
-                necessitatibus officiis omnis porro suscipit voluptatibus? Ad consequuntur, ducimus eligendi minima
-                omnis perferendis repellat sed soluta vero. Cupiditate expedita fuga hic in laboriosam maxime quo vitae!
+            <br>
+            <br>
+            <br>
+            <div id="target3">
+                <br>
+                <br>
+                <h2>Virtual Tour</h2>
+                <div class="rounded-xl">
+                    <a href="https://www.absoluteyachts.com/en/virtual-tour/virtual-tour-navetta-75/">
+                        <img src="{% static 'img/virtual.jpg' %}" class="w-full rounded-xl"/>
+                    </a>
+                </div>
+
             </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>Video</h2>
+            <div class="relative w-full max-w-4xl mx-auto mt-8" style="padding-top: 56.25%;">
+                <iframe
+                        class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+                        src="https://www.youtube.com/embed/MM5525A4bsQ?si=seJAClLMqwaO-qSk"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
         </div>
         <div class="hidden xl:block col-span-1">
             <div class="fixed max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md mr-5">
-                {% include 'website/components/contact_form.html' with yacht=yacht%}
+                {% include 'website/components/contact_form.html' with yacht=yacht %}
             </div>
         </div>
     </div>

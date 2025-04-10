@@ -1,23 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const accordions = document.querySelectorAll(".accordion-btn");
+document.querySelectorAll('.accordion-toggle').forEach(btn => {
 
-    accordions.forEach((btn) => {
-        btn.addEventListener("click", function () {
-            const content = this.nextElementSibling;
-            const icon = this.querySelector(".icon");
+      btn.addEventListener('click', () => {
+        const panel = btn.nextElementSibling;
+        const icon = btn.querySelector('.icon');
+        const isOpen = panel.style.maxHeight && panel.style.maxHeight !== '0px';
 
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                icon.textContent = "+";
-            } else {
-                document.querySelectorAll(".accordion-content").forEach((el) => {
-                    el.style.maxHeight = null;
-                    el.previousElementSibling.querySelector(".icon").textContent = "+";
-                });
-
-                content.style.maxHeight = content.scrollHeight + "px";
-                icon.textContent = "−";
+        if (isOpen) {
+          panel.style.maxHeight = '0px';
+          icon.textContent = '+';
+        } else {
+          // Prvo zatvorimo sve unutar tog nivoa (opciono ako želiš samo jedan otvoren po sekciji)
+          const siblings = btn.parentElement.parentElement.querySelectorAll('.accordion-panel');
+          siblings.forEach(sib => {
+            if (sib !== panel) {
+              sib.style.maxHeight = '0px';
+              const siblingIcon = sib.previousElementSibling?.querySelector('.icon');
+              if (siblingIcon) siblingIcon.textContent = '+';
             }
-        });
+          });
+
+          // Otvaranje
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          icon.textContent = '−';
+        }
+
+        // Ako je ugnježden, propagira max-height naviše
+        let parent = panel.parentElement;
+        while (parent) {
+          if (parent.classList.contains('accordion-panel')) {
+            parent.style.maxHeight =  '500px';
+          }
+          parent = parent.parentElement;
+        }
+      });
+
+
+
+
     });
-});

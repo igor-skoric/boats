@@ -1,0 +1,29 @@
+{% load static %}
+
+
+<section id="miniGallery">
+  <div class="max-w-4xl mx-auto p-4">
+  <!-- Gornje slike -->
+  <div class="flex justify-center space-x-4 mb-6">
+    <img src="{% static 'img/upper-deck.jpg' %}" alt="Slika 1" class="w-24 h-24 object-cover cursor-pointer rounded shadow" onclick="changeImage(this)">
+    <img src="{% static 'img/lower-deck.png' %}" alt="Slika 2" class="w-24 h-24 object-cover cursor-pointer rounded shadow" onclick="changeImage(this)">
+    <img src="{% static 'img/main-deck.png' %}" alt="Slika 3" class="w-24 h-24 object-cover cursor-pointer rounded shadow" onclick="changeImage(this)">
+  </div>
+
+  <!-- Donja velika slika -->
+  <div class="w-full">
+    <img id="main-image" src="{% static 'img/upper-deck.jpg'%}" alt="Glavna slika" class="w-full max-h-[500px] object-contain rounded-xl shadow-lg">
+  </div>
+</div>
+</section>
+
+
+
+<script>
+    //Logika za mini gallery za jahtu
+    function changeImage(el) {
+      const mainImage = document.getElementById('main-image');
+      mainImage.src = el.src;
+  }
+
+</script>

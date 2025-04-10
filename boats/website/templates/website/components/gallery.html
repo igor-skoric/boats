@@ -27,13 +27,14 @@
   <div class="container mx-auto">
     <!-- Glavna slika -->
     <div class="mb-4">
-      <img id="mainImage" class="rounded-lg shadow-lg cursor-pointer" src="http://127.0.0.1:8000/static/img/boat1.jpg" alt="Glavna slika">
+      <img id="mainImage" class="rounded-lg shadow-lg cursor-pointer" src="{{yacht.image.url}}" alt="Glavna slika">
     </div>
 
-    <!-- Manje slike ispod glavne -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-2" id="thumbnailsContainer" data-images='["http://127.0.0.1:8000/static/img/boat1.jpg", "http://127.0.0.1:8000/static/img/logo.png", "http://127.0.0.1:8000/static/img/new.png"]'>
+        <!-- Manje slike ispod glavne -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2" id="thumbnailsContainer" data-images="{{yacht.get_image_urls}}">
       <!-- Manje slike će biti dodate dinamički pomoću JavaScript-a -->
     </div>
+
   </div>
 
   <!-- Modal za galeriju -->

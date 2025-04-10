@@ -5,85 +5,46 @@
 
 {% block content %}
 
-{% include 'website/components/hero.html' with title='Usluge' description='pogledajte naše usluge' %}
-<section id="services" class="container-custom">
+<section id="services" class="mx-auto max-w-[1200px] mt-[150px] md:mt-[100px] p-5">
     <br>
-    <div class="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 z-10 text-black ">
-        <a href="{% url 'service_details' %}" class="">
-            <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer shadow-xl">
-                <img src="{% static 'img/services/care.png'%}" alt=""
-                     class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
+        {% include 'website/components/breadcrumbs.html' %}
+    <div class="px-4 my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 z-10 text-black">
+        <a href="{% url 'service_details' %}" class="rounded-b-xl ">
+            <div class="flex justify-center text-center p-4 bg-blue-200 rounded-t-xl">
+                <img src="{% static 'img/services/care.png'%}" alt="" class="z-100  w-24 transition-transform duration-300 ease-in-out hover:scale-105"/>
+            </div>
+
+            <div class="relative rounded-b-xl cursor-pointer shadow-xl">
+<!--                <img src="{% static 'img/services/care.png'%}" alt=""-->
+<!--                     class="z-100 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-24 transition-transform duration-300 ease-in-out hover:scale-105"/>-->
                 <div class="p-5">
-                    <p class="text-xs">Neki nesto</p>
-                    <h3 class="">Organizacija „Survey“ pregleda</h3>
-                    <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia
-                        porro repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore
-                        molestiae quo. Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum
-                        esse eum excepturi minus nostrum officiis, optio recusandae. Cumque dicta fugit totam
-                        veniam?</p>
+                    <h3 class="text-center text-xl font-bold text-gray-600">Organizacija „Survey“ pregleda</h3>
+                    <hr>
+                    <br>
+                    <ul class="space-y-3">
+                        <li class="">
+                          <h3 class="text-xl font-semibold text-gray-700">Usluge koje pruzamo</h3>
+                          <p class="my-1 border-l-4 border-blue-500 pl-4 text-gray-600 text-lg">Redovno pokretanje motora i generatora (kontrola parametara motora)</p>
+                          <p class="my-1 border-l-4 border-blue-500 pl-4 text-gray-600 text-lg">Pokretanje pumpi</p>
+                          <p class="my-1 border-l-4 border-blue-500 pl-4 text-gray-600 text-lg">Provera baterija</p>
+<!--                          <p class="my-1 border-l-4 border-blue-500 pl-4 text-gray-600 text-lg">Redovna ventilacija unutrašnjosti</p>-->
+<!--                          <p class="my-1 border-l-4 border-blue-500 pl-4 text-gray-600 text-lg">Provera vezova, zatezanje konopa pre oluje</p>-->
+<!--                          <p class="my-1 border-l-4 border-blue-500 pl-4 text-gray-600 text-lg">Redovno pranje i uklanjanje soli sa spoljašnjeg trupa</p>-->
+<!--                          <p class="my-1 border-l-4 border-blue-500 pl-4 text-gray-600 text-lg">Čišćenje unutrašnjosti</p>-->
+                        </li>
+                        <hr>
+                        <li class="">
+                          <h3 class="text-xl font-semibold text-gray-700">Garantujemo sledece</h3>
+                          <p class="my-1 border-l-4 border-green-500 pl-4 text-gray-600 text-lg">Posvećenost vašem plovilu </p>
+                          <p class="my-1 border-l-4 border-green-500 pl-4 text-gray-600 text-lg">Preciznost i detaljnos</p>
+                          <p class="my-1 border-l-4 border-green-500 pl-4 text-gray-600 text-lg">Odgovornost</p>
+                        </li>
+                      </ul>
                 </div>
+                <div class="text-center p-4 bg-blue-200 hover:bg-blue-400 hover:text-white rounded-b-xl font-bold">Detaljnije</div>
             </div>
         </a>
-        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer shadow-xl">
-            <img src="{% static 'img/services/care.png'%}" alt=""
-                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
-            <div class="p-5">
-                <p class="text-xs">Neki nesto</p>
-                <h3 class="">Transfer plovila</h3>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
-                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
-                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
-                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
-            </div>
-        </div>
-        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer">
-            <img src="{% static 'img/services/care.png'%}" alt=""
-                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
-            <div class="p-5">
-                <p class="text-xs">Neki nesto</p>
-                <h3 class="">Vansezonska briga o plovilu</h3>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
-                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
-                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
-                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
-            </div>
-        </div>
-        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer">
-            <img src="{% static 'img/services/care.png'%}" alt=""
-                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
-            <div class="p-5">
-                <p class="text-xs">Neki nesto</p>
-                <h3 class="">Posredovanje pri registraciji plovila</h3>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
-                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
-                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
-                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
-            </div>
-        </div>
-        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer">
-            <img src="{% static 'img/services/care.png'%}" alt=""
-                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
-            <div class="p-5">
-                <p class="text-xs">Neki nesto</p>
-                <h3 class="">Usluge dockinga i održavanje plovila</h3>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
-                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
-                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
-                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
-            </div>
-        </div>
-        <div class=" bg-blue-300 rounded-lg overflow-hidden cursor-pointer">
-            <img src="{% static 'img/services/care.png'%}" alt=""
-                 class="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
-            <div class="p-5">
-                <p class="text-xs">Neki nesto</p>
-                <h3 class="">Tehnička podrška i servis</h3>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ipsam mollitia porro
-                    repudiandae tenetur veniam. Ab consectetur deserunt dolorum eum impedit inventore molestiae quo.
-                    Aliquam in iste neque odio optio porro ratione unde! Aliquam dolor dolorem earum esse eum excepturi
-                    minus nostrum officiis, optio recusandae. Cumque dicta fugit totam veniam?</p>
-            </div>
-        </div>
+
     </div>
 
 </section>

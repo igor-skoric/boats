@@ -8,15 +8,30 @@ def home(request):
 
 
 def products(request, product_type):
-    yachts = Yacht.objects.filter(yacht_type=product_type, published=True)
-    context = {'product_type': product_type, 'yachts': yachts}
-    print(context)
+    used = []
+    new = []
+
+    if product_type == "new":
+        new = Yacht.objects.filter(yacht_type=product_type, published=True)  # Pretpostavljam da imaš 'condition' polje
+        title = "Nova Plovila"
+    elif product_type == "used":
+        used = Yacht.objects.filter(yacht_type=product_type, published=True)
+        title = "Polovna Plovila"
+    else:
+        title = "Sva Plovila"
+        used = Yacht.objects.filter(yacht_type='used', published=True)
+        new = Yacht.objects.filter(yacht_type='new', published=True)
+
+    context = {'product_type': product_type, 'new': new, 'used': used, 'title':title}
+
     return render(request, 'website/pages/products.html', context)
 
 
 def product_details(request, slug):
     yacht = Yacht.objects.get(slug=slug)
-    context = {'yacht': yacht}
+    characteristic = yacht.characteristics.all()
+    context = {'yacht': yacht, 'characteristic': characteristic}
+
     return render(request, 'website/pages/product_details.html', context)
 
 

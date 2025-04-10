@@ -1,19 +1,33 @@
 {% load static %}
+<!-- Accordion Item -->
 
-<!-- templates/components/accordion.html -->
-
-<div class="border rounded-lg overflow-hidden">
-    <button class="accordion-btn block w-full bg-gray-300 p-3 font-bold cursor-pointer flex justify-between items-center">
-        <span>{{ title }}</span>
+{{ items }}
+{% for item in yacht.yacht_sections.all %}
+<div class="bg-white rounded-lg shadow border">
+    <button class="accordion-toggle w-full text-left px-4 py-3 font-bold text-lg flex justify-between items-center">
+        <span>{{item.section_template}}</span>
         <span class="icon">+</span>
     </button>
-    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 bg-gray-200 ">
-        <div class="p-3">
-            <ul class="list-disc pl-5">
-                {% for item in items %}
-                    <li>{{ item }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+    <div class="accordion-panel overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+        <ul class="p-4 space-y-2">
+            {% for subsection in item.yacht_subsections.all %}
+            <li>
+                <button class="accordion-toggle w-full text-left font-semibold flex justify-between items-center">
+                    <span>{{subsection.subsection_template.title}}</span>
+                    {% if subsection.yacht_details.all %}
+                        <span class="icon"></span>
+                    {% endif %}
+                </button>
+                <div class="accordion-panel overflow-hidden transition-all duration-300 ease-in-out max-h-0 pl-4 text-sm text-gray-700">
+                    <ul class="py-2 list-disc pl-5">
+                      {% for detail in subsection.yacht_details.all %}
+                        <li>{{detail.detail_template.label}}</li>
+                      {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
+{% endfor %}

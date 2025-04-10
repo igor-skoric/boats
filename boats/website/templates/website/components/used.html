@@ -1,17 +1,20 @@
 {% load static %}
 
-<a href="{% url 'product_details' yacht.slug %}" class="rounded-lg z-0">
-    <div class="relative shadow-xl hover:bg-red-200 z-40 overflow-hidden ">
-        <div class="absolute inset-0 hover:bg-gray-200/30 rounded-lg"></div>
-        <img src="{% static 'img/boat1.jpg' %}" alt="" class="rounded-t transition-transform duration-300 ease-in-out group-hover:scale-105"/>
-        <div class="bg-gray-100 w-full p-5">
-            <h2 class="text-3xl font-semibold mb-2">{{yacht.name}}</h2>
-            <p class="text-2xl text-blue-400 font-bold">{{yacht.price}} <span class="text-black font-bold text-xl">(VAT excluded)</span></p>
-            <br>
-            <p><span class="font-semibold text-gray-400">Godina: </span><span class="font-bold">{{yacht.year}}</span></p>
-            <p><span class="font-semibold text-gray-400">Dužina: </span><span class="font-bold">{{yacht.length}} m</span></p>
+<section id="usedYachts">
+    <a href="{% url 'product_details' yacht.slug %}" class="rounded-lg z-0">
+        <div class="relative shadow-xl hover:bg-red-200 z-40 overflow-hidden ">
+            <div class="absolute inset-0 hover:bg-gray-200/30 rounded-lg"></div>
+            <img src="{{yacht.image.url}}" alt=""
+                 class="rounded-t transition-transform duration-300 ease-in-out group-hover:scale-105"/>
+            <div class="bg-gray-100 w-full p-5">
+                <h2 class="text-3xl font-semibold mb-2">{{yacht.name}}</h2>
+                <p class="text-2xl text-blue-400 font-bold">{{yacht.price}} <span class="text-black font-bold text-xl">(VAT excluded)</span>
+                </p>
+                <br>
+                <p><span class="font-semibold text-gray-400">Godina: </span><span class="font-bold">{{yacht}}</span></p>
+                <p><span class="font-semibold text-gray-400">Dužina: </span><span class="font-bold">{{yacht}} m</span>
+                </p>
+            </div>
         </div>
-    </div>
-</a>
-
-
+    </a>
+</section>

@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-39zplp)er3%6h*wi6v*_g1ku4ioq2&&j1#d-a6!c7oi$5*s!jg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'boats.rs', 'boats.rs.itbranch.rs']
 
@@ -20,9 +20,10 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'boats.rs', 'boats.rs.itbranch.rs']
 # Application definition
 
 INSTALLED_APPS = [
+    'nested_admin',
     'tailwind',
     'theme',
-    'jazzmin',
+
     'website',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -32,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise',
     'django_browser_reload',
+    'jazzmin',
 ]
 
 MIDDLEWARE = [
@@ -60,6 +62,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'website.context_processors.config',
+                'website.context_processors.breadcrumbs',
             ],
         },
     },
@@ -197,5 +200,20 @@ LOGGING = {
             "level": "INFO",  # Hvatamo i INFO i ERROR logove
             "propagate": True,
         },
+    },
+}
+
+
+JAZZMIN_SETTINGS = {
+    "site_title": "My Admin Panel",
+    "site_header": "My Admin Panel",
+    "welcome_sign": "Welcome to My Admin Panel",
+    "custom_links": {
+        "website": [{
+            "name": "Home",
+            "url": "/",
+            "icon": "fas fa-home",
+            "permissions": ["auth.view_user"]
+        }]
     },
 }

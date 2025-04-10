@@ -6,28 +6,38 @@
 {% block content %}
 
 
-{% if product_type == 'new' %}
-    {% include 'website/components/hero.html' with title='Nova Plovila' description='Pogledajte neka od nasih plovila' %}
-{% elif product_type == 'used' %}
-    {% include 'website/components/hero.html' with title='Koriscena Plovila' description='Pogledajte neka od nasih plovila' %}
-{% endif %}
-
-
-
-<section id="newBoats" class="mx-auto max-w-[1200px]">
+<section id="boats" class="mx-auto max-w-[1200px] mt-[150px] md:mt-[100px] p-5">
+    {% include 'website/components/breadcrumbs.html' %}
+    <h1 class="mt-200">{{title}}</h1>
     <div class="p-5 text-center text-3xl">ABSOLUTE</div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-lg p-5">
-        {% if product_type == 'new' %}
-            {% for yacht in yachts %}
-                {% include 'website/components/new.html' with yacht=yacht %}
-            {% endfor %}
 
+        {% if product_type == 'new' %}
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 rounded-lg p-5">
+                {% for yacht in new %}
+
+                    {% include 'website/components/new.html' with yacht=yacht %}
+                {% endfor %}
+            </div>
         {% elif product_type == 'used' %}
-            {% for yacht in yachts %}
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 rounded-lg p-5">
+                {% for yacht in used %}
+                    {% include 'website/components/used.html' with yacht=yacht %}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    {% if product_type == 'all' %}
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 rounded-lg p-5">
+            {% for yacht in used %}
                 {% include 'website/components/used.html' with yacht=yacht %}
             {% endfor %}
-        {% endif %}
-    </div>
+        </div>
+        <div class="relative grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 rounded-lg p-5">
+            {% for yacht in new %}
+                {% include 'website/components/new.html' with yacht=yacht %}
+            {% endfor %}
+        </div>
+    {% endif %}
 </section>
 
 

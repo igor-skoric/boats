@@ -42,4 +42,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
+    // Na scroll dodaj boju header-u
+
+
+    window.addEventListener('DOMContentLoaded', function () {
+      const header = document.getElementById('main-header');
+
+      // Provera da li smo na home page-u (putanja je "/")
+      if (window.location.pathname === '/') {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 50) {
+            header.classList.remove('bg-transparent');
+            header.classList.add('bg-gray-800', 'shadow-md');
+          } else {
+            header.classList.add('bg-transparent');
+            header.classList.remove('bg-gray-800', 'shadow-md');
+          }
+        });
+      } else {
+        // Na drugim stranicama uvek tamna pozadina
+        header.classList.remove('bg-transparent');
+        header.classList.add('bg-gray-800', 'shadow-md');
+      }
+    });
+
+
 });

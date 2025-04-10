@@ -1,25 +1,27 @@
 {% load static %}
 <!--<div id="social" class="mx-auto">-->
-
  <!-- Header -->
-    <header class="fixed top-0 left-0 w-full  bg-gray-800 z-40 ">
+    <header id="main-header" class="fixed top-0 left-0 w-full {% if request.resolver_match.url_name != 'home' %}bg-gray-800{% endif %} z-40 ">
         <div class="max-w-[1200px] mx-auto px-10 py-[10px] text-white">
           <nav class="hidden lg:flex gap-10 items-center justify-between px-10">
             <div class="flex gap-16">
                 <div class=" group">
+                    <a href="{% url 'admin:index' %}" class="hover:text-gray-300">Admin</a>
+                </div>
+                <div class=" group">
                     <a href="{% url 'home' %}" class="hover:text-gray-300">POČETNA</a>
                 </div>
                 <div class="group">
-                    <a href="#" class="hover:text-gray-300">PRODAJA PLOVILA</a>
+                    <a href="{% url 'all_products' %}" class="hover:text-gray-300">PRODAJA PLOVILA</a>
                         <div class="absolute left-0 top-[50px] w-full bg-gray-800 opacity-100 scale-y-0 group-hover:opacity-100 group-hover:scale-y-100 transition-all duration-300 origin-top">
                             <div class="px-64 pt-10 pb-5 grid grid-cols-6 gap-5 z-10 text-black ">
-                                <a href="{% url 'products' 'new' %}" class="">
+                                <a href="{% url 'new_products' %}" class="">
                                     <div class="  rounded-lg overflow-hidden cursor-pointer flex flex-col items-center justify-center p-5">
                                         <img src="{% static 'img/services/org.png'%}" alt="" class="w-16 object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
                                         <p class="text-white font-semibold text-center">Nova Plovila</p>
                                     </div>
                                 </a>
-                                <a href="{% url 'products' 'used' %}" class="">
+                                <a href="{% url 'used_products' %}" class="">
                                     <div class="  rounded-lg overflow-hidden cursor-pointer flex flex-col items-center justify-center p-5">
                                         <img src="{% static 'img/services/transfer.png'%}" alt="" class="w-16 object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
                                         <p class="text-white font-semibold text-center">Polovna Plovila</p>
@@ -74,11 +76,11 @@
             </div>
             <div class="hidden lg:flex justify-center items-center z-40">
                 <a href="{% url 'home' %}" class="">
-                    <img src="{% static 'img/logo.png' %}" alt="Logo" class=" h-[60px]"/>
+                    <img src="{% static 'img/logo1.png' %}" alt="Logo" class=" h-[60px]"/>
                 </a>
             </div>
             <div>
-                <a href="#" class="hover:text-gray-300">O NAMA</a>
+                <a href="{% url 'about' %}" class="hover:text-gray-300">O NAMA</a>
                 <div class="absolute left-0 w-full bg-white text-black hidden group-hover:block p-4">
                     <p class="text-center">Services description here</p>
                     <img src="" alt="Services" class="w-full h-auto">
@@ -102,7 +104,7 @@
 
           <div class="lg:hidden flex items-center justify-between w-full">
             <a href="{% url 'home' %}" class="">
-                <img src="{% static 'img/logo.png' %}" alt="Logo" class="w-[80px]"/>
+                <img src="{% static 'img/logo1.png' %}" alt="Logo" class="w-[80px]"/>
             </a>
             <div class="flex items-center">
                 <button class="text-white" id="mobileMenuToggle">
@@ -121,7 +123,7 @@
                 <p id="closeMobileMenu" class="text-3xl text-end cursor-pointer w-fit">X</p>
             </div>
             <div class="flex justify-center items-center">
-                <img src="{% static 'img/logo.png' %}" alt="Logo" class="w-[80px]" />
+                <img src="{% static 'img/logo1.png' %}" alt="Logo" class="w-[80px]" />
             </div>
             <br>
             <a href="{% url 'home' %}" class="text-2xl block px-6 py-6 hover:bg-gray-600">POČETNA</a>
@@ -130,8 +132,8 @@
                     PRODAJA PLOVILA ▾
                 </button>
                 <div id="servicesMenu1" class=" overflow-hidden max-h-0 bg-gray-700 shadow-md rounded-md transition-all duration-300 ease-in-out">
-                    <a href="{% url 'products' 'new' %}" class="text-xl block px-8 py-4 hover:bg-gray-600">Nova plovila</a>
-                    <a href="{% url 'products' 'used' %}" class="text-xl block px-8 py-4 hover:bg-gray-600">Polovna plovila</a>
+                    <a href="{% url 'new_products' %}" class="text-xl block px-8 py-4 hover:bg-gray-600">Nova plovila</a>
+                    <a href="{% url 'used_products' %}" class="text-xl block px-8 py-4 hover:bg-gray-600">Polovna plovila</a>
                 </div>
             </div>
 
@@ -149,7 +151,7 @@
                     <a href="#" class="text-xl block px-8 py-4 hover:bg-gray-600">Tehnička podrška i servis</a>
                 </div>
             </div>
-            <a href="#" class="text-2xl block px-6 py-6 hover:bg-gray-600">O NAMA</a>
+            <a href="{% url 'about' %}" class="text-2xl block px-6 py-6 hover:bg-gray-600">O NAMA</a>
             <a href="#" class="text-2xl block px-6 py-6 hover:bg-gray-600">DODATNA OPREMA</a>
             <a href="#" class="text-2xl block px-6 py-6 hover:bg-gray-600">KONTAKT</a>
         </div>
