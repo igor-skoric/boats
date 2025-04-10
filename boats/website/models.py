@@ -16,16 +16,16 @@ class YachtCharacteristic(models.Model):
 
     # Tip karakteristike iz liste ispod
     name = models.CharField(max_length=100, choices=[
-        ('model', 'Model'),
-        ('length', 'Length (m)'),
-        ('beam', 'Beam (m)'),  # širina
-        ('draft', 'Draft (m)'),  # gaz
-        ('weight', 'Weight (kg)'),
-        ('propulsion', 'Propulsion'),
-        ('fuel_tank', 'Fuel Tank (l)'),
-        ('water_tank', 'Water Tank (l)'),
-        ('cabins', 'Number of Cabins'),
-        ('speed', 'Speed'),
+        ('model', 'MODEL'),
+        ('length', 'DUŽINA(m)'),
+        ('beam', 'ŠIRINA'),  # širina
+        ('draft', 'GAZ (m)'),  # gaz
+        ('weight', 'TEŽINA (t)'),
+        ('propulsion', 'POGON'),
+        ('fuel_tank', 'TANK GORIVA (l)'),
+        ('water_tank', 'TANK VODE (l)'),
+        ('cabins', 'BROJ KABINA'),
+        ('speed', 'BRZINA'),
     ])
 
     value = models.CharField(max_length=255)

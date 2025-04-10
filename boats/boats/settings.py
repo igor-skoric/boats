@@ -20,8 +20,8 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'boats.rs', 'boats.rs.itbranch.rs']
 # Application definition
 
 INSTALLED_APPS = [
-    'nested_admin',
     'tailwind',
+    'nested_admin',
     'theme',
     'website',
     'django.contrib.admin',

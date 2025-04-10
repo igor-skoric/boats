@@ -1,7 +1,7 @@
 {% load static %}
 
-<section id="usedYachts">
-    <a href="{% url 'product_details' yacht.slug %}" class="rounded-lg z-0">
+<section id="usedYachts" class="z-0">
+    <a href="{% url 'product_details' yacht.slug %}" class="rounded-lg ">
         <div class="relative shadow-xl hover:bg-red-200 z-40 overflow-hidden ">
             <div class="absolute inset-0 hover:bg-gray-200/30 rounded-lg"></div>
             <img src="{{yacht.image.url}}" alt=""

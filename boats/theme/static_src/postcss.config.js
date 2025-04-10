@@ -3,8 +3,12 @@ module.exports = {
     "./templates/**/*.html",
     "./static/js/**/*.js",
   ],
-  theme: {
-    extend: {},
-  },
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Poppins', 'sans-serif'],
+        },
+        },
+    },
   plugins: [],
 }

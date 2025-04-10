@@ -12,121 +12,104 @@
     <div class="grid gap-10 grid-cols-3 ">
         <div class="col-span-3 xl:col-span-2">
             {% include 'website/components/gallery.html' with yacht=yacht %}
-            <br><br>l
-            <h1 class="text-4xl">{{yacht.name}}</h1><br>
-            <div class="my-20 text-gray-600 font-bold  border-b-5 bg-gray-100 grid grid-cols-1 md:grid-cols-3 group relative rounded-xl shadow-lg text-center">
-                <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
-                     onclick="scrollToElement('target1')">Dodatne Informacije
-                </div>
-                <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
-                     onclick="scrollToElement('target2')">Palube
-                </div>
-                <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
-                     onclick="scrollToElement('target3')">Virtual Tour
-                </div>
-                <div class="p-5 border-b cursor-pointer hover:bg-gray-300 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
-                     onclick="scrollToElement('target4')">Video
-                </div>
+            <br><br>
+
+            <div class="flex flex-col md:flex-row gap-5 md:gap-20">
+                <p class="font-semibold text-4xl">{{yacht.name}}</p>
+                <p class="font-semibold text-4xl text-sky-600">{{yacht.price}}</p>
             </div>
             <div class="my-10 grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-0">
-                {% for characteristic in yacht.characteristics.all %}
-                {% if characteristic.name == 'model' %}
                 <div class="border-r border-b border-gray-200 p-4">
-                    <p class="">{{characteristic.get_name_display}}</p>
-                    <p class="text-2xl"> {{characteristic.value}} </p>
+                    <p class="font-semibold">{{yacht.characteristics.all.0.get_name_display}}</p>
+                    <p class="text-xl"> {{yacht.characteristics.all.0.value}} </p>
                 </div>
-                {% endif %}
-                {% if characteristic.name == 'length' %}
                 <div class="md:border-r border-b border-gray-200 p-4">
-                    <p class="">{{characteristic.get_name_display}}</p>
-                    <p class="text-2xl">{{characteristic.value}}</p>
+                    <p class="font-semibold">{{yacht.characteristics.all.1.get_name_display}}</p>
+                    <p class="text-xl"> {{yacht.characteristics.all.1.value}} </p>
                 </div>
-                {% endif %}
-                {% if characteristic.name == 'beam' %}
                 <div class="border-r border-b border-gray-200 p-4">
-                    <p class="">{{characteristic.get_name_display}}</p>
-                    <p class="text-2xl">{{characteristic.value}}</p>
+                    <p class="font-semibold">{{yacht.characteristics.all.2.get_name_display}}</p>
+                    <p class="text-xl"> {{yacht.characteristics.all.2.value}} </p>
                 </div>
-                {% endif %}
-                {% if characteristic.name == 'draft' %}
                 <div class="border-b border-gray-200 p-4">
-                    <p class="">{{characteristic.get_name_display}}</p>
-                    <p class="text-2xl">{{characteristic.value}}</p>
+                    <p class="font-semibold">{{yacht.characteristics.all.3.get_name_display}}</p>
+                    <p class="text-xl"> {{yacht.characteristics.all.3.value}} </p>
                 </div>
-                {% endif %}
-                {% if characteristic.name == 'weight' %}
                 <div class="border-r border-b md:border-b-0 border-gray-200 p-4">
-                    <p class="">{{characteristic.get_name_display}}</p>
-                    <p class="text-2xl">{{characteristic.value}}</p>
+                    <p class="font-semibold">{{yacht.characteristics.all.4.get_name_display}}</p>
+                    <p class="text-xl"> {{yacht.characteristics.all.4.value}} </p>
                 </div>
-                {% endif %}
-                {% if characteristic.name == 'propulsion' %}
                 <div class="md:border-r border-b md:border-b-0 border-gray-200 p-4">
-                    <p class="">{{characteristic.get_name_display}}</p>
-                    <p class="text-2xl">{{characteristic.value}}</p>
+                    <p class="font-semibold">{{yacht.characteristics.all.5.get_name_display}}</p>
+                    <p class="text-xl"> {{yacht.characteristics.all.5.value}} </p>
                 </div>
-                {% endif %}
-                {% if characteristic.name == 'fuel_tank' %}
                 <div class="border-r border-gray-200 p-4">
-                    <p class="">{{characteristic.get_name_display}}</p>
-                    <p class="text-2xl">{{characteristic.value}}</p>
+                    <p class="font-semibold">{{yacht.characteristics.all.6.get_name_display}}</p>
+                    <p class="text-xl"> {{yacht.characteristics.all.6.value}} </p>
                 </div>
-                {% endif %}
-                {% if characteristic.name == 'water_tank' %}
                 <div class="border-gray-200 p-4">
-                    <p class="">{{characteristic.get_name_display}}</p>
-                    <p class="text-2xl">{{characteristic.value}}</p>
+                    <p class="font-semibold">{{yacht.characteristics.all.7.get_name_display}}</p>
+                    <p class="text-xl"> {{yacht.characteristics.all.7.value}} </p>
                 </div>
-                {% endif %}
-                {% endfor %}
             </div>
+            <div class="my-20 text-white gap-2  border-b-5 grid grid-cols-1 md:grid-cols-3 group relative rounded-xl text-center">
+                <div class="shadow-lg  bg-gray-800  py-3 px-5 border-b cursor-pointer hover:bg-sky-600 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
+                     onclick="scrollToElement('target1')">DODATNE INFORMACIJE
+                </div>
+                <div class="shadow-lg bg-gray-800  py-3 px-5 border-b cursor-pointer hover:bg-sky-600 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
+                     onclick="scrollToElement('target2')">3D PRIKAZ
+                </div>
+                <div class="shadow-lg  bg-gray-800  py-3 px-5 border-b cursor-pointer hover:bg-sky-600 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500"
+                     onclick="scrollToElement('target3')">VIDEO
+                </div>
+            </div>
+
             <br>
             <br>
             <!-- Naslov -->
             <div id="target1">
                 {% include 'website/components/title_subtitle.html' with yacht=yacht %}
             </div>
-            <br>
-            <br>
+
             <br>
             <div id="target2">
-                <br><br>
-                {% include 'website/components/mini_gallery.html' %}
+                <br>
+                <br>
+                <h2 class="text-center text-gray-400">VIRTUAL TOUR</h2><br>
+                <div class="rounded-xl">
+                    <a href="https://www.absoluteyachts.com/en/virtual-tour/virtual-tour-60-fly/">
+                        <img src="{% static 'img/virtual.jpg' %}" class="w-full rounded-xl"/>
+                    </a>
+                </div>
             </div>
 
             <br>
             <br>
+            <div>
+                <br><br>
+                {% include 'website/components/mini_gallery.html' %}
+            </div>
+            <br>
+
             <br>
             <div id="target3">
+                <h2 class="text-center text-gray-400">VIDEO</h2>
+
                 <br>
-                <br>
-                <h2>Virtual Tour</h2>
-                <div class="rounded-xl">
-                    <a href="https://www.absoluteyachts.com/en/virtual-tour/virtual-tour-navetta-75/">
-                        <img src="{% static 'img/virtual.jpg' %}" class="w-full rounded-xl"/>
-                    </a>
+                <div class="relative w-full max-w-4xl mx-auto mt-8" style="padding-top: 56.25%;">
+                    <iframe
+                            class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+                            src="https://www.youtube.com/embed/MM5525A4bsQ?si=seJAClLMqwaO-qSk"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
                 </div>
 
             </div>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h2>Video</h2>
-            <div class="relative w-full max-w-4xl mx-auto mt-8" style="padding-top: 56.25%;">
-                <iframe
-                        class="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
-                        src="https://www.youtube.com/embed/MM5525A4bsQ?si=seJAClLMqwaO-qSk"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen>
-                </iframe>
-            </div>
             <br>
             <br>
             <br>

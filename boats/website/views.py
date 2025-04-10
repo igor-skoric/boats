@@ -30,6 +30,7 @@ def products(request, product_type):
 def product_details(request, slug):
     yacht = Yacht.objects.get(slug=slug)
     characteristic = yacht.characteristics.all()
+    print( characteristic)
     context = {'yacht': yacht, 'characteristic': characteristic}
 
     return render(request, 'website/pages/product_details.html', context)

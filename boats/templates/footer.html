@@ -1,7 +1,52 @@
 {% load static %}
 
-<footer>
-    <div class="h-[300px] bg-gray-200 w-full flex justify-center items-center">
-        <h1 class="text-center">Ovo je footer</h1>
+<footer class="px-5 md:px-24 lg:px-32 py-12 bg-gray-800">
+    <div class="flex justify-end text-white/50">
+        <div class="flex gap-5">
+            <a href=""><i class="fa-brands fa-instagram text-2xl"></i></a>
+            <a href=""><i class="fa-brands fa-square-facebook text-2xl"></i></a>
+        </div>
+    </div>
+    <hr class="border-t-2 border-gray-600 my-4">
+    <br>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
+        <div class="flex flex-col items-center justify-center">
+            <a href="{% url 'home' %}" class="">
+                <img src="{% static 'img/logo1.png' %}" alt="Logo" class=" h-32"/>
+            </a>
+            <br>
+            <div><i class="fa-solid fa-address-book"></i> 0611526425</div>
+            <div><i class="fa-solid fa-envelope"></i> iskoric95@gmail.com</div>
+        </div>
+        <div class="">
+            <h2 class="pl-1 border-l-4 border-blue-500">Polovna Plovila</h2>
+            <ul>
+                <li>Prvo plovilo</li>
+                <li>Drugo plovilo</li>
+                <li>Trece plovilo</li>
+                <li>Cetvrto plovilo</li>
+            </ul>
+        </div>
+        <div class="">
+            <h2 class="pl-1 border-l-4 border-blue-500">Nova Plovila</h2>
+            <ul>
+                <li>Prvo plovilo</li>
+                <li>Drugo plovilo</li>
+                <li>Trece plovilo</li>
+                <li>Cetvrto plovilo</li>
+            </ul>
+        </div>
+        <div class="">
+            <h2 class="pl-1 border-l-4 border-blue-500">Usluge</h2>
+            <ul>
+                <li><a href="">Organizacija „Survey“ pregleda</a></li>
+                <li><a href="">Transfer plovila</a></li>
+                <li><a href="">Posredovanje pri registraciji plovila</a></li>
+                <li><a href="">Vansezonska briga o plovilu</a></li>
+                <li><a href="">Usluge dockinga i održavanje plovila</a></li>
+                <li><a href="">Tehnička podrška i servis</a></li>
+            </ul>
+        </div>
+
     </div>
 </footer>

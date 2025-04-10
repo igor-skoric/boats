@@ -4,7 +4,7 @@
 {{ items }}
 {% for item in yacht.yacht_sections.all %}
 <div class="bg-white rounded-lg shadow border">
-    <button class="accordion-toggle w-full text-left px-4 py-3 font-bold text-lg flex justify-between items-center">
+    <button class="accordion-toggle w-full text-left px-4 py-3 font-semibold text-lg flex justify-between items-center">
         <span>{{item.section_template}}</span>
         <span class="icon">+</span>
     </button>
@@ -12,7 +12,7 @@
         <ul class="p-4 space-y-2">
             {% for subsection in item.yacht_subsections.all %}
             <li>
-                <button class="accordion-toggle w-full text-left font-semibold flex justify-between items-center">
+                <button class="accordion-toggle w-full text-left {% if subsection.yacht_details.all %} border border-b {% endif %}  flex justify-between items-center">
                     <span>{{subsection.subsection_template.title}}</span>
                     {% if subsection.yacht_details.all %}
                         <span class="icon"></span>

@@ -2,28 +2,52 @@
 
 
 <section id="miniGallery">
-  <div class="max-w-4xl mx-auto p-4">
-  <!-- Gornje slike -->
-  <div class="flex justify-center space-x-4 mb-6">
-    <img src="{% static 'img/upper-deck.jpg' %}" alt="Slika 1" class="w-24 h-24 object-cover cursor-pointer rounded shadow" onclick="changeImage(this)">
-    <img src="{% static 'img/lower-deck.png' %}" alt="Slika 2" class="w-24 h-24 object-cover cursor-pointer rounded shadow" onclick="changeImage(this)">
-    <img src="{% static 'img/main-deck.png' %}" alt="Slika 3" class="w-24 h-24 object-cover cursor-pointer rounded shadow" onclick="changeImage(this)">
-  </div>
+    <div class="max-w-4xl mx-auto p-4">
+        <!-- Gornje slike -->
+        <div class="flex justify-center space-x-4 mb-6 text-white">
+            <div>
+                <img src="{% static 'img/upper-deck.jpg' %}" alt="Slika 1"
+                     class="w-36 object-cover cursor-pointer rounded shadow hidden" >
+                <br>
+                <div onclick="changeImage(this)" class="text-center shadow-lg bg-gray-800  py-3 px-5 border-b cursor-pointer hover:bg-sky-600 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500">
+                    LOWER DECK
+                </div>
+            </div>
+            <div>
+                <img src="{% static 'img/lower-deck.jpg' %}" alt="Slika 2"
+                     class="w-36 object-cover cursor-pointer rounded shadow hidden"><br>
+                <div onclick="changeImage(this)" class="text-center shadow-lg bg-gray-800  py-3 px-5 border-b cursor-pointer hover:bg-sky-600 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500">
+                    MAIN DECK
+                </div>
+            </div>
+            <div>
+                <img src="{% static 'img/main-deck.jpg' %}" alt="Slika 3"
+                     class="w-36 object-cover cursor-pointer rounded shadow hidden"><br>
+                <div onclick="changeImage(this)" class="text-center shadow-lg bg-gray-800  py-3 px-5 border-b cursor-pointer hover:bg-sky-600 custom-hover rounded-xl transform transition-transform hover:-translate-y-1 duration-500">
+                    UPPER DECK
+                </div>
 
-  <!-- Donja velika slika -->
-  <div class="w-full">
-    <img id="main-image" src="{% static 'img/upper-deck.jpg'%}" alt="Glavna slika" class="w-full max-h-[500px] object-contain rounded-xl shadow-lg">
-  </div>
-</div>
+            </div>
+
+        </div>
+
+        <!-- Donja velika slika -->
+        <div class="w-full">
+            <img id="main-image" src="{% static 'img/upper-deck.jpg'%}" alt="Glavna slika"
+                 class="w-full max-h-[500px] object-contain rounded-xl shadow-lg">
+        </div>
+    </div>
 </section>
-
 
 
 <script>
     //Logika za mini gallery za jahtu
-    function changeImage(el) {
-      const mainImage = document.getElementById('main-image');
-      mainImage.src = el.src;
+    function changeImage(element) {
+    const parentDiv = element.parentElement;
+       // Dohvati sliku unutar roditeljskog div-a
+    const img = parentDiv.querySelector('img');
+    const mainImage = document.getElementById('main-image');
+    mainImage.src = img.src;
   }
 
 </script>
