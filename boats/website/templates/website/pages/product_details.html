@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% load static %}
+{% load custom_filters %}
+
 {% block title %}Index{% endblock %}
 
 {% block content %}
@@ -16,7 +18,7 @@
 
             <div class="flex flex-col md:flex-row gap-5 md:gap-20">
                 <p class="font-semibold text-4xl">{{yacht.name}}</p>
-                <p class="font-semibold text-4xl text-sky-600">{{yacht.price}}</p>
+                <p class="font-semibold text-4xl text-sky-600">{{yacht.price|intdot }}</p>
             </div>
             <div class="my-10 grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-0">
                 <div class="border-r border-b border-gray-200 p-4">

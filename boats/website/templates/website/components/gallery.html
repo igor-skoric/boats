@@ -1,7 +1,7 @@
 {% load static %}
 
 
-  <style>
+<style>
     /* Dodatni stil za galeriju */
     .gallery-modal {
       display: none;
@@ -20,37 +20,39 @@
       max-height: 90%;
       object-fit: contain;
     }
-  </style>
+</style>
 
 
-  <!-- Galerija -->
-  <div class="container mx-auto">
+<!-- Galerija -->
+<div class="container mx-auto">
     <!-- Glavna slika -->
     <div class="mb-4">
-      <img id="mainImage" class="rounded-lg shadow-lg cursor-pointer" src="{{yacht.image.url}}" alt="Glavna slika">
+        <img id="mainImage" class="rounded-lg shadow-lg cursor-pointer" src="{{ yacht.image.url }}" alt="Glavna slika">
     </div>
 
-        <!-- Manje slike ispod glavne -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-2" id="thumbnailsContainer" data-images="{{yacht.get_image_urls}}">
-      <!-- Manje slike će biti dodate dinamički pomoću JavaScript-a -->
+    <!-- Manje slike ispod glavne -->
+    <div class="overflow-x-auto">
+        <div id="thumbnailsContainer" class="flex gap-2" data-images="{{ yacht.get_image_urls }}">
+        </div>
     </div>
+</div>
 
-  </div>
-
-  <!-- Modal za galeriju -->
-  <div id="galleryModal" class="relative gallery-modal flex">
+<!-- Modal za galeriju -->
+<div id="galleryModal" class="relative gallery-modal flex">
     <button class="absolute top-4 right-4 text-white text-5xl" onclick="closeGallery()">×</button>
     <div class=" flex justify-center">
-      <button id="prevBtn" class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white text-6xl" onclick="moveImage(-1)">❮</button>
-      <img id="galleryImage" class="rounded-lg" src="" alt="Galerija">
-      <button id="nextBtn" class="absolute right-10 top-1/2 transform -translate-y-1/2 text-white text-6xl" onclick="moveImage(1)">❯</button>
+        <button id="prevBtn" class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white text-6xl"
+                onclick="moveImage(-1)">❮
+        </button>
+        <img id="galleryImage" class="rounded-lg" src="" alt="Galerija">
+        <button id="nextBtn" class="absolute right-10 top-1/2 transform -translate-y-1/2 text-white text-6xl"
+                onclick="moveImage(1)">❯
+        </button>
     </div>
-  </div>
+</div>
 
 
-
-
-  <script>
+<script>
     // Učitavanje slika iz data atributa
     const images = JSON.parse(document.getElementById('thumbnailsContainer').getAttribute('data-images'));
     let currentImageIndex = 0;
@@ -88,4 +90,4 @@
     document.getElementById('mainImage').addEventListener('click', function() {
       openGallery(0);
     });
-  </script>
+</script>

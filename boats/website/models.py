@@ -43,7 +43,7 @@ class Yacht(models.Model):
     ]
 
     name = models.CharField(max_length=255, verbose_name="Naziv jahte")
-    price = models.DecimalField(max_digits=12, decimal_places=2, verbose_name="Cena (€)")
+    price = models.DecimalField(max_digits=12, decimal_places=0, verbose_name="Cena (€)")
     yacht_type = models.CharField(max_length=10, choices=YACHT_TYPE_CHOICES, verbose_name="Tip jahte", default="used")
     description = models.TextField(blank=True, verbose_name="Opis jahte")
     image = models.ImageField(upload_to='yachts/', blank=True, null=True, verbose_name="Slika jahte")

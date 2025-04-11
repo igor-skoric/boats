@@ -4,7 +4,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -12,10 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-39zplp)er3%6h*wi6v*_g1ku4ioq2&&j1#d-a6!c7oi$5*s!jg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'boats.rs', 'boats.rs.itbranch.rs']
-
 
 # Application definition
 
@@ -33,6 +31,7 @@ INSTALLED_APPS = [
     'whitenoise',
     'django_browser_reload',
     'jazzmin',
+
 ]
 
 MIDDLEWARE = [
@@ -69,7 +68,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'boats.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
@@ -79,7 +77,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -99,7 +96,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -110,7 +106,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -141,23 +136,18 @@ NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 # Whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-
-
 # settings.py
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.boats.rs'  # SMTP server za vašu domenu (npr. cPanel)
-EMAIL_PORT = 587    # Koristi 587 za TLS (ako koristite TLS enkripciju)
+EMAIL_PORT = 587  # Koristi 587 za TLS (ako koristite TLS enkripciju)
 EMAIL_USE_TLS = True  # Uključivanje TLS enkripcije (ili False ako ne koristiš TLS)
 EMAIL_HOST_USER = 'contact@boats.rs'  # Tvoj email
 EMAIL_HOST_PASSWORD = ''  # Tvoj email password (ili aplikacijski password)
 DEFAULT_FROM_EMAIL = 'contact@boats.rs'  # Email sa kojeg ćeš slati poruke
 
-
 LOGGING_DIR = os.path.join(BASE_DIR, "logs")  # Kreiraj folder za logove
 if not os.path.exists(LOGGING_DIR):
     os.makedirs(LOGGING_DIR)
-
 
 # LOGOVI
 LOGGING = {
@@ -201,7 +191,6 @@ LOGGING = {
         },
     },
 }
-
 
 JAZZMIN_SETTINGS = {
     "site_title": "My Admin Panel",
