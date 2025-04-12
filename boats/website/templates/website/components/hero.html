@@ -2,7 +2,7 @@
 
 <section class="relative h-screen w-full overflow-hidden">
     <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
-        <source src="https://www.nautica.rs/wp-content/uploads/2023/06/Goga-Prodaja-plovila.mp4" type="video/mp4">
+        <source src="{% static 'video/hero.mp4'%}" type="video/mp4">
         Vaš pregledač ne podržava HTML5 video.
     </video>
 
@@ -11,8 +11,8 @@
 
     <!-- Sadržaj preko videa -->
     <div class="relative flex flex-col items-center justify-center h-full text-white text-center">
-        <h1 class="text-4xl lg:text-6xl font-bold">{{title}}</h1>
-        <p class="text-xl mt-4">{{description}}</p>
+<!--        <h1 class="text-4xl lg:text-6xl font-bold">{{title}}</h1>-->
+<!--        <p class="text-xl mt-4">{{description}}</p>-->
 <!--        <a href="#" class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600">Saznaj više</a>-->
     </div>
 </section>
